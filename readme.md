@@ -156,3 +156,49 @@ python3 tabla.py
 ### y automaticamente se va crear en el raiz de archivos el archivo datos.sqlite
 
 
+# haciendo migración al actualizar modelo
+## primero instalamos 
+```bash
+pip install flask_migrate
+```
+
+## luego desde el archivo lo importamos 
+```py
+from flask_migrate import Migrate
+
+# despues de la base de datos 
+Migrate(app, basededatos)
+```
+
+### y para ejecutarlo ahora solo tienes que ejecutrar desde consola lo siguiente 
+### desde mac 
+```bash
+export FLASK_APP=intro.py
+```
+### desde windows
+```bash
+set FLASK_APP = tuarchivo.py
+```
+## y  hacemos la inicializacion de la migración
+```bash
+flask db init
+```
+### y automaticamente aparece una carpeta de migrations 
+## y ahora hacemos la migracion 
+```bash 
+flask db migrate -m "incluimos la columna de pais"
+```
+
+## y finalmente para mostrarnos la actualización de la base de datos con la migración
+```bash
+flask db upgrade
+```
+
+
+
+
+
+
+
+
+
