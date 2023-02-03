@@ -1,4 +1,4 @@
-# Primeros pasos en Flask 
+# Primeros pasos en Flask con base de datos SQLAlchemy
 
 ### Como requisito, tener estas herramientas: 
 <li>Editor de Código: <a href="https://code.visualstudio.com/">VsCode </a> </li>
