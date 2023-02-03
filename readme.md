@@ -194,6 +194,28 @@ flask db migrate -m "incluimos la columna de pais"
 flask db upgrade
 ```
 
+## agregar datos despues de la migración
+### crearse un nuevo archivo en este caso insertar.py
+```py
+from intro import basededatos, Persona, app
+
+with app.app_context():
+    # agregando dato a un usuario
+    persona = Persona.query.get(3)
+    persona.pais = 'Chile'
+    # agregamos los cambios
+    basededatos.session.add(persona)
+    # guardamos cambios
+    basededatos.session.commit()
+```
+### y ejecutar este mismo archivo
+```bash
+python3 insertar.py
+```
+
+
+
+
 
 
 
