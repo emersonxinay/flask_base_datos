@@ -51,7 +51,7 @@ def lista():
     return render_template('vistalista.html', mascota=mascota)
 
 
-@app.route('/alta')
+@app.route('/alta', methods=['POST', 'GET'])
 def alta():
     formulario = FormularioAlta()
     if formulario.validate_on_submit():
@@ -66,7 +66,7 @@ def alta():
 # nueva ruta
 
 
-@app.route('/eliminar')
+@app.route('/eliminar', methods=['POST', 'GET'])
 def eliminar():
     formulario = FormularioBaja()
     if formulario.validate_on_submit:

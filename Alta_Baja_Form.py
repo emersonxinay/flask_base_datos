@@ -4,7 +4,7 @@ from wtforms import StringField, IntegerField, SubmitField
 
 class FormularioAlta(FlaskForm):
     nombre = StringField('Nombre de la mascota: ')
-    boton = SubmitField('Agregar')
+    boton = SubmitField('alta')
 
 
 class FormularioBaja(FlaskForm):

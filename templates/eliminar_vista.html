@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Borrar mascotas</h2>
+<form method="POST">
+  {{formulario.hidden_tag()}} {{formulario.id.label}} {{formulario.id}}
+  {{formulario.boton}}
+</form>
+{% endblock %}
